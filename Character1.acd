@@ -1,0 +1,64 @@
+//-------------------------------------------------------------------//
+//
+//	Microsoft Agent Character Description
+//
+//	Character Version 2.1
+//	Copyright (c) 1996-98, Microsoft Corporation
+//
+//-------------------------------------------------------------------//
+
+DefineCharacter
+
+	DefineInfo 0x0009
+		Name = "Character"
+	EndInfo
+
+	DefineInfo 0x001F
+		Name = "Adam"
+	EndInfo
+
+	GUID = {D3162406-8735-4010-962F-0D5E7C220F96}
+	Width = 128
+	Height = 128
+	Transparency = 10
+	DefaultFrameDuration = 10
+	Style = AXS_VOICE_NONE | AXS_BALLOON_ROUNDRECT
+	ColorTable = "C:\Users\posta\Pictures\RestPose.bmp"
+
+EndCharacter
+
+//-------------------------------------------------------------------//
+
+DefineBalloon
+	NumLines = 2
+	CharsPerLine = 28
+	FontName = "MS Sans Serif"
+	FontHeight = 10
+	ForeColor = 00000000
+	BackColor = 00e1ffff
+	BorderColor = 00646464
+EndBalloon
+
+//-------------------------------------------------------------------//
+
+DefineAnimation "RestPose"
+
+	TransitionType = 2
+
+	DefineFrame
+		Duration = 10
+		DefineImage
+			Filename = "C:\Users\posta\Pictures\RestPose.bmp"
+		EndImage
+	EndFrame
+
+EndAnimation
+
+//-------------------------------------------------------------------//
+
+DefineState "IdlingLevel1"
+	Animation = "RestPose"
+EndState
+
+//-------------------------------------------------------------------//
+
